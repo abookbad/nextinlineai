@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next In Line AI — Futuristic Liquid‑Glass Landing Page
 
-## Getting Started
+Tech stack
+- Next.js App Router + TypeScript (strict)
+- Tailwind CSS v4 (tokens via CSS variables)
+- Framer Motion (client-only effects)
+- Absolute imports via `@/`
 
-First, run the development server:
+Setup
+1) Install dependencies
+   - npm install
+2) Run dev server
+   - npm run dev
+3) Build
+   - npm run build && npm start
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Structure
+- `src/styles/tokens.css` — design tokens (colors, radii, shadows, motion) and glass utilities
+- `src/lib/*` — copy, animations, seo metadata, utils, analytics stub
+- `src/components/*` — ui primitives, core layout, effects, and sections
+- `src/app/*` — App Router routes, layout, metadata, robots/sitemap
+- `public/images/*` — noise/specular textures, blobs, hero mockup, og
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Content management
+- All copy in `src/lib/copy.ts` (no hardcoded strings in components)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Accessibility
+- Respects `prefers-reduced-motion`: disables parallax, cursor light, sheen sweeps
+- Proper semantics, focus rings, and high contrast on glass (text uses subtle backplate/shadows)
+- Skip to content link present
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Performance
+- GPU-friendly transforms only; low intensity blurs; minimal filters
+- `next/image` with explicit sizes to avoid CLS
+- Decorative assets are lightweight; heavy client-only effects are dynamically imported
 
-## Learn More
+Testing (scaffold only)
+- Unit (suggested): React Testing Library + Vitest for `Navbar` and `Reveal`
+- E2E (suggested): Playwright smoke (home loads, nav links scroll)
 
-To learn more about Next.js, take a look at the following resources:
+Reduced motion features
+- Cursor light, sheen sweeps, and blob movement are disabled when users prefer reduced motion.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Assets
+- `noise.png`: tiling micro-grain overlay (~2% opacity)
+- `specular-streak.png`: angled highlight
+- `blob-*.svg`: gradient blobs
+- `hero-phone.png`: placeholder mockup

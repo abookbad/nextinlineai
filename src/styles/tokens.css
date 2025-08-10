@@ -1,0 +1,154 @@
+/* Design Tokens for Next In Line AI */
+:root {
+  /* Brand Colors */
+  --nl-blue: #276ef1;
+  --nl-green: #2ecc71;
+  --nl-bg: #ffffff;
+  --nl-text: #222222;
+
+  /* Radii */
+  --radius-xl: 1.25rem;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --shadow-glow: 0 0 24px rgba(39, 110, 241, 0.25);
+
+  /* Motion */
+  --dur-1: 220ms;
+  --dur-2: 420ms;
+  --ease-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* Glass Material */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-tint: rgba(39, 110, 241, 0.06);
+  --glass-border-light: rgba(255, 255, 255, 0.7);
+  --glass-border-dark: rgba(0, 0, 0, 0.08);
+  --glass-ring: rgba(39, 110, 241, 0.45);
+  --glass-ring-strong: rgba(39, 110, 241, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Keep light-themed brand; ensure contrast helpers still work */
+    --nl-bg: #0b0c10;
+    --nl-text: #f7f7f7;
+    --glass-bg: rgba(20, 24, 32, 0.55);
+    --glass-tint: rgba(39, 110, 241, 0.09);
+    --glass-border-light: rgba(255, 255, 255, 0.12);
+    --glass-border-dark: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Tailwind v4 inline theme tokens */
+@theme inline {
+  --color-nl-blue: var(--nl-blue);
+  --color-nl-green: var(--nl-green);
+  --color-nl-bg: var(--nl-bg);
+  --color-nl-text: var(--nl-text);
+  --radius-xl: var(--radius-xl);
+}
+
+/* Glass utilities */
+.glass {
+  /* Very bright liquid-glass panel */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-xl);
+  position: relative;
+  transition: background 200ms var(--ease-smooth), transform 200ms var(--ease-smooth), box-shadow 200ms var(--ease-smooth);
+}
+
+/* Extra bright glass for feature cards */
+.glass-feature {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.78));
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+.glass-feature:hover {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.82));
+}
+
+.glass:hover {
+  /* Slight illumination on hover */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+}
+
+.glass-ring {
+  /* Subtle rim glow base */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.9), /* crisp edge */
+    0 0 14px rgba(39, 110, 241, 0.15), /* blue outer */
+    0 0 10px rgba(46, 204, 113, 0.15); /* green inner */
+}
+
+.glass-ring:hover,
+.glass-ring:focus-visible {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.95),
+    0 0 18px rgba(39, 110, 241, 0.2),
+    0 0 14px rgba(46, 204, 113, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Specular sheen overlay helper */
+.sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.sheen::after {
+  content: "";
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(
+      120px 40px at 50% 50%,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(60deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.35) 50%, rgba(255, 255, 255, 0) 60%);
+  transform: rotate(15deg);
+  opacity: 0;
+  transition: opacity var(--dur-1) var(--ease-smooth), transform var(--dur-2)
+      var(--ease-smooth);
+  pointer-events: none;
+}
+
+.sheen:hover::after,
+.sheen:focus-visible::after {
+  opacity: 0.6;
+  transform: rotate(15deg) translate3d(4%, 4%, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass,
+  .glass-ring {
+    transition: none !important;
+  }
+  .sheen::after {
+    display: none !important;
+  }
+}
+
+/* Mini proof pills */
+.pill {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(10px);
+}
+.pill:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
