@@ -55,6 +55,21 @@ export default function Pricing() {
             </Reveal>
           ))}
         </div>
+
+        {/* Different business call-to-action */}
+        <div className="mt-8 text-center">
+          <p className="text-sm text-white/80 sm:text-base">
+            Different business?{' '}
+            <a
+              href="#contact"
+              className="text-[var(--nl-blue)] underline-offset-4 hover:underline transition-colors duration-200"
+              aria-label="Schedule a call to discuss your business fit"
+            >
+              Schedule a quick call
+            </a>{' '}
+            to see if this is a good fit for you.
+          </p>
+        </div>
       </Container>
     </Section>
   );

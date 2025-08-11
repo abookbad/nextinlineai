@@ -2,6 +2,7 @@ import Container from "@/components/core/Container";
 import Section from "@/components/core/Section";
 import Reveal from "@/components/effects/Reveal";
 import { industries as industriesCopy } from "@/lib/copy";
+import Image from "next/image";
 
 const iconMap: Record<string, React.ReactNode> = {
   scissors: (
@@ -31,13 +32,26 @@ export default function Industries() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {industriesCopy.items.map((item) => (
             <Reveal key={item.title}>
-              <div className="glass sheen glass-ring flex items-start gap-4 rounded-[var(--radius-xl)] p-4 sm:p-6">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/60 text-[var(--nl-green)]" aria-hidden="true">
-                  {iconMap[item.icon]}
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-[rgba(0,0,0,0.95)]">{item.title}</h3>
-                  <p className="mt-1 text-[rgba(0,0,0,0.85)]">{item.description}</p>
+              <div className="group glass sheen glass-ring relative h-64 overflow-hidden rounded-[var(--radius-xl)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_8px_32px_rgba(0,0,0,0.3)] sm:h-72">
+                {/* Background Image */}
+                <Image
+                  src={item.image}
+                  alt={`${item.title} business`}
+                  fill
+                  className="object-cover animate-[breathing_12s_ease-in-out_infinite] transition-transform duration-300 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+                
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+                
+                {/* Content */}
+                <div className="relative z-10 flex h-full flex-col items-center justify-center p-6 text-center">
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm text-white shadow-[0_0_0_1px_rgba(255,255,255,0.2)]">
+                    {iconMap[item.icon]}
+                  </div>
+                  <h3 className="text-xl font-bold text-white sm:text-2xl">{item.title}</h3>
+                  <p className="mt-2 text-sm text-white/90 sm:text-base">{item.description}</p>
                 </div>
               </div>
             </Reveal>

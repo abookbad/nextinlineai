@@ -54,3 +54,97 @@ body {
   opacity: 0.02;
 }
 
+/* Zoom animation for CTA background */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Breathing animation for industry cards */
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Pulse animation for step circles */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+/* Micro spark animation for step chips */
+@keyframes microSpark {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Checkmark animations */
+@keyframes checkmarkIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes numberIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Stepper animations */
+@keyframes drawPath1 {
+  to {
+    stroke-dasharray: 120 0;
+    opacity: 1;
+  }
+}
+
+@keyframes drawPath2 {
+  to {
+    stroke-dasharray: 120 0;
+    opacity: 1;
+  }
+}
+
+
+

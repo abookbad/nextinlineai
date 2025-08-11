@@ -3,7 +3,7 @@ import Footer from "@/components/core/Footer";
 import Hero from "@/components/sections/Hero";
 import Features from "@/components/sections/Features";
 import Industries from "@/components/sections/Industries";
-import HowItWorks from "@/components/sections/HowItWorks";
+import VerticalStepper from "@/components/sections/VerticalStepper";
 import Pricing from "@/components/sections/Pricing";
 import CTA from "@/components/sections/CTA";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <Features />
         <Industries />
-        <HowItWorks />
+        <VerticalStepper />
         <Pricing />
         <CTA />
       </main>

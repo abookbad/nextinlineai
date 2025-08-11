@@ -20,7 +20,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ghost:
         "bg-transparent text-[var(--nl-text)] border border-black/10 hover:bg-black/[0.04]",
       glass:
-        "glass glass-ring sheen text-[var(--nl-text)] px-5 py-2.5",
+        "glass glass-ring sheen bg-white/70 backdrop-blur-sm text-black font-bold px-5 py-2.5 border border-white/60 shadow-[0_0_0_1px_rgba(255,255,255,0.3),0_4px_12px_rgba(0,0,0,0.2)] hover:bg-white/80 hover:scale-105 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.4),0_8px_24px_rgba(255,255,255,0.7)] transition-all duration-200 [text-shadow:1px_1px_2px_rgba(255,255,255,0.8)]",
     };
 
     return (
