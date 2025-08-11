@@ -122,7 +122,7 @@ export default function LiveVoiceCallDemo() {
                   key={key}
                   onClick={() => setSelectedScenario(key)}
                   disabled={callStatus.status === "calling"}
-                  className={`rounded-lg border p-3 text-left text-sm transition ${
+                  className={`rounded-lg border p-3 text-left text-sm transition cursor-pointer ${
                     selectedScenario === key ? "border-[var(--nl-blue)] bg-[var(--nl-blue)]/10" : "border-black/10 hover:border-black/20"
                   } disabled:cursor-not-allowed disabled:opacity-50`}
                 >
