@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@/styles/animations.css";
 import "@/styles/tokens.css";
 import { generateSiteMetadata } from "@/lib/seo";
 import ClientEffects from "@/components/core/ClientEffects";

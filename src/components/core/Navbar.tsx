@@ -9,6 +9,8 @@ import Image from "next/image";
 const links = [
   { href: "/home#home", label: "Home" },
   { href: "/home#features", label: "Features" },
+  { href: "/barber", label: "Barbers" },
+  { href: "/cleaning", label: "Window & Solar" },
   { href: "/home#industries", label: "Industries" },
   { href: "/home#pricing", label: "Pricing" },
   { href: "/home#contact", label: "Contact" },
@@ -62,6 +64,8 @@ export default function Navbar() {
         <nav className="grid grid-cols-3 gap-3 text-center">
           {[
             { href: "/home#features", label: "Features" },
+            { href: "/barber", label: "Barbers" },
+            { href: "/cleaning", label: "Window & Solar" },
             { href: "/home#industries", label: "Industries" },
             { href: "/home#pricing", label: "Pricing" },
           ].map((l) => (

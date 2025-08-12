@@ -8,10 +8,13 @@ export default function Footer() {
           © {new Date().getFullYear()} Next In Line AI — <a className="hover:underline hover:text-white" href="mailto:hello@nextinlineai.com">hello@nextinlineai.com</a>
         </p>
         <nav className="flex gap-6">
-          <Link href="#features" className="hover:underline hover:text-white">
+          <Link href="/home#features" className="hover:underline hover:text-white">
             Features
           </Link>
-          <Link href="#pricing" className="hover:underline hover:text-white">
+          <Link href="/barber" className="hover:underline hover:text-white">
+            Barbers
+          </Link>
+          <Link href="/home#pricing" className="hover:underline hover:text-white">
             Pricing
           </Link>
           <Link href="/book" className="hover:underline hover:text-white">
