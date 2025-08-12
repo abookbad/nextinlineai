@@ -61,7 +61,7 @@ export default function Industries() {
         <p className="mx-auto mt-8 mb-8 max-w-2xl text-center text-[0.9rem] sm:text-[0.95rem] text-[rgba(255,255,255,0.85)]">
           Different business?{' '}
           <a
-            href="#contact"
+            href="/book"
             className="text-[var(--nl-blue)] underline-offset-4 hover:underline"
             aria-label="Schedule a call to discuss your business fit"
           >

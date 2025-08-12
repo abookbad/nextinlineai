@@ -22,8 +22,12 @@ export default function Hero() {
           </Reveal>
           <Reveal>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <Button variant="primary">{heroCopy.ctaPrimary}</Button>
-              <Button variant="glass">{heroCopy.ctaSecondary}</Button>
+              <a href="/book">
+                <Button variant="primary">{heroCopy.ctaPrimary}</Button>
+              </a>
+              <a href="/book">
+                <Button variant="glass">{heroCopy.ctaSecondary}</Button>
+              </a>
             </div>
           </Reveal>
         </div>

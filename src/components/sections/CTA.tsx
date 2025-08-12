@@ -30,7 +30,9 @@ export default function CTA() {
             <h2 className="text-2xl font-bold text-white sm:text-3xl">{finalCopy.title}</h2>
             <p className="mt-3 text-white/90">{finalCopy.sub}</p>
             <div className="mt-6 flex justify-center">
-              <Button variant="primary">{finalCopy.button}</Button>
+              <a href="/book">
+                <Button variant="primary">{finalCopy.button}</Button>
+              </a>
             </div>
             <p className="mt-4 text-xs text-white/80">Contact: <a className="underline hover:text-white" href="mailto:hello@nextinlineai.com">hello@nextinlineai.com</a></p>
           </div>

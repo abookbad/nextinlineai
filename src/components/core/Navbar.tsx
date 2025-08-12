@@ -7,11 +7,11 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#features", label: "Features" },
-  { href: "#industries", label: "Industries" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "/home#home", label: "Home" },
+  { href: "/home#features", label: "Features" },
+  { href: "/home#industries", label: "Industries" },
+  { href: "/home#pricing", label: "Pricing" },
+  { href: "/home#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
       aria-label="Main"
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="#home" className="flex items-center gap-3 font-semibold text-white">
+        <Link href="/home#home" className="flex items-center gap-3 font-semibold text-white">
           <Image src="/images/logoWithName.png" alt="Next In Line AI" width={150} height={34} priority className="h-8 w-auto" />
         </Link>
         <div className="hidden gap-6 md:flex">
@@ -51,7 +51,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <Button variant="primary" className="h-9 px-4 text-sm">Get Started</Button>
+          <Link href="/book">
+            <Button variant="primary" className="h-9 px-4 text-sm">Get Started</Button>
+          </Link>
         </div>
       </div>
 
@@ -59,9 +61,9 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 pb-3 pt-2 md:hidden">
         <nav className="grid grid-cols-3 gap-3 text-center">
           {[
-            { href: "#features", label: "Features" },
-            { href: "#industries", label: "Industries" },
-            { href: "#pricing", label: "Pricing" },
+            { href: "/home#features", label: "Features" },
+            { href: "/home#industries", label: "Industries" },
+            { href: "/home#pricing", label: "Pricing" },
           ].map((l) => (
             <Link
               key={l.href}

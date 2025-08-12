@@ -14,7 +14,7 @@ export default function Footer() {
           <Link href="#pricing" className="hover:underline hover:text-white">
             Pricing
           </Link>
-          <Link href="#contact" className="hover:underline hover:text-white">
+          <Link href="/book" className="hover:underline hover:text-white">
             Contact
           </Link>
         </nav>

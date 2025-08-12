@@ -49,7 +49,9 @@ export default function Pricing() {
                 </div>
 
                 <div className="mt-4 flex justify-center pt-2 mt-auto">
-                  <Button variant="primary" className="sm:w-auto">{plan.cta}</Button>
+                  <a href="/book">
+                    <Button variant="primary" className="sm:w-auto">{plan.cta}</Button>
+                  </a>
                 </div>
               </div>
             </Reveal>
@@ -61,7 +63,7 @@ export default function Pricing() {
           <p className="text-sm text-white/80 sm:text-base">
             Different business?{' '}
             <a
-              href="#contact"
+              href="/book"
               className="text-[var(--nl-blue)] underline-offset-4 hover:underline transition-colors duration-200"
               aria-label="Schedule a call to discuss your business fit"
             >
