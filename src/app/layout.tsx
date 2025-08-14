@@ -6,6 +6,7 @@ import "@/styles/tokens.css";
 import { generateSiteMetadata } from "@/lib/seo";
 import ClientEffects from "@/components/core/ClientEffects";
 import GlobalBackground from "@/components/effects/GlobalBackground";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         <GlobalBackground />
         <ClientEffects />
         {children}
+        <Analytics />
       </body>
     </html>
   );
