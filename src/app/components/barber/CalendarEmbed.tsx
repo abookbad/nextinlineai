@@ -4,7 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 
 export default function CalendarEmbed({ src }: { src?: string }) {
-  const calendarSrc = src || process.env.NEXT_PUBLIC_GHL_CALENDAR_EMBED || "";
+  const calendarSrc =
+    src || "https://links.nextinlineai.com/widget/booking/tzCmmkdwJfNpRz7o1Bdz";
   return (
     <Section>
       <Container>

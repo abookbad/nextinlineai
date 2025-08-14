@@ -4,7 +4,7 @@ export const dynamic = "force-dynamic";
 
 const VAPI_CONFIG = {
   VAPI_PHONE_NUMBER_ID: "8f8082ed-1755-4963-b6c9-4d31c8f185a1",
-  BEARER_TOKEN: process.env.VAPI_API_KEY,
+  BEARER_TOKEN: "6ab31e16-4903-4d00-946e-f013c731be2b",
   API_URL: "https://api.vapi.ai/call",
 } as const;
 

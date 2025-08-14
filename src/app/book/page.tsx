@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 };
 
 export default function BookPage() {
-  const calendarUrl = process.env.NEXT_PUBLIC_GHL_EMBED_URL;
+  const calendarUrl =
+    "https://links.nextinlineai.com/widget/booking/tzCmmkdwJfNpRz7o1Bdz";
   const videoUrl = process.env.NEXT_PUBLIC_BOOK_VIDEO_URL;
 
   return (
