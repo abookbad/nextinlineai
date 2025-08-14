@@ -7,6 +7,7 @@ import { generateSiteMetadata } from "@/lib/seo";
 import ClientEffects from "@/components/core/ClientEffects";
 import GlobalBackground from "@/components/effects/GlobalBackground";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
         <ClientEffects />
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
