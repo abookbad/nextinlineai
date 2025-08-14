@@ -44,6 +44,7 @@ export const industries = {
         "Streamline bookings, keep chairs full, and reduce missed calls.",
       icon: "scissors",
       image: "/images/barberShopPicture.jpeg",
+      href: "/barber",
     },
     {
       title: "Window & Solar Cleaning",
@@ -51,6 +52,7 @@ export const industries = {
         "Book more jobs, track every client, and grow your schedule.",
       icon: "sun",
       image: "/images/solarCleaningPicture.jpeg",
+      href: "/cleaning",
     },
   ],
 };

@@ -3,9 +3,6 @@
 import { useEffect, useRef } from "react";
 import Section from "../common/Section";
 import Container from "../common/Container";
-import dynamic from "next/dynamic";
-
-const DemoModal = dynamic(() => import("./workflow/DemoModal"), { ssr: false, loading: () => null });
 
 export default function Workflow({ steps }: { steps: { step: string; detail: string }[] }) {
   const lineRef = useRef<HTMLDivElement>(null);
@@ -58,30 +55,9 @@ export default function Workflow({ steps }: { steps: { step: string; detail: str
               </li>
             ))}
           </ol>
-          <DemoModalTrigger />
-          <DemoModal />
         </div>
       </Container>
     </Section>
-  );
-}
-
-function DemoModalTrigger() {
-  const open = () => {
-    const event = new CustomEvent('open-demo-modal');
-    window.dispatchEvent(event);
-  };
-  return (
-    <div className="mt-6">
-      <button
-        onClick={open}
-        className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm text-white hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
-        aria-haspopup="dialog"
-        aria-controls="demo-modal"
-      >
-        Play demo
-      </button>
-    </div>
   );
 }
 

@@ -21,7 +21,7 @@ export const barberContent: BarberContent = {
     headline: "Fill your chair. Let AI handle the booking.",
     sub: "Your 24/7 AI phone receptionist + website + CRM built for barbers — live in 72 hours.",
     ctas: { primaryHref: "/book", secondaryHref: "#workflow" },
-    heroImage: "/images/hero-phone.png",
+    heroImage: "/images/aiDontSleep.jpeg",
   },
   pains: [
     "Missed calls = missed cuts",

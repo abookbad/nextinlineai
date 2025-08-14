@@ -8,7 +8,6 @@ import Image from "next/image";
 
 const links = [
   { href: "/home#home", label: "Home" },
-  { href: "/home#features", label: "Features" },
   { href: "/barber", label: "Barbers" },
   { href: "/cleaning", label: "Window & Solar" },
   { href: "/home#industries", label: "Industries" },
@@ -63,7 +62,6 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 pb-3 pt-2 md:hidden">
         <nav className="grid grid-cols-3 gap-3 text-center">
           {[
-            { href: "/home#features", label: "Features" },
             { href: "/barber", label: "Barbers" },
             { href: "/cleaning", label: "Window & Solar" },
             { href: "/home#industries", label: "Industries" },

@@ -3,6 +3,7 @@ import Section from "@/components/core/Section";
 import Reveal from "@/components/effects/Reveal";
 import { industries as industriesCopy } from "@/lib/copy";
 import Image from "next/image";
+import Link from "next/link";
 
 const iconMap: Record<string, React.ReactNode> = {
   scissors: (
@@ -32,7 +33,7 @@ export default function Industries() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {industriesCopy.items.map((item) => (
             <Reveal key={item.title}>
-              <div className="group glass sheen glass-ring relative h-64 overflow-hidden rounded-[var(--radius-xl)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_8px_32px_rgba(0,0,0,0.3)] sm:h-72">
+              <Link href={(item as any).href || "#"} className="group glass sheen glass-ring relative block h-64 overflow-hidden rounded-[var(--radius-xl)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_8px_32px_rgba(0,0,0,0.3)] sm:h-72 focus:outline-none focus:ring-2 focus:ring-white/50">
                 {/* Background Image */}
                 <Image
                   src={item.image}
@@ -53,7 +54,7 @@ export default function Industries() {
                   <h3 className="text-xl font-bold text-white sm:text-2xl">{item.title}</h3>
                   <p className="mt-2 text-sm text-white/90 sm:text-base">{item.description}</p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
