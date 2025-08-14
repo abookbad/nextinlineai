@@ -33,7 +33,7 @@ export default function Industries() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {industriesCopy.items.map((item) => (
             <Reveal key={item.title}>
-              <Link href={(item as any).href || "#"} className="group glass sheen glass-ring relative block h-64 overflow-hidden rounded-[var(--radius-xl)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_8px_32px_rgba(0,0,0,0.3)] sm:h-72 focus:outline-none focus:ring-2 focus:ring-white/50">
+              <Link href={item.href || "#"} className="group glass sheen glass-ring relative block h-64 overflow-hidden rounded-[var(--radius-xl)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.2),0_8px_32px_rgba(0,0,0,0.3)] sm:h-72 focus:outline-none focus:ring-2 focus:ring-white/50">
                 {/* Background Image */}
                 <Image
                   src={item.image}

@@ -4,7 +4,7 @@ import Reveal from "@/components/effects/Reveal";
 import { pricing as pricingCopy } from "@/lib/copy";
 import { Button } from "@/components/ui/Button";
 
-export default function Pricing({ pricing }: { pricing: { setupRange: string; monthlyRange: string; guarantee: string; note?: string } }) {
+export default function Pricing({ pricing: _pricing }: { pricing: { setupRange: string; monthlyRange: string; guarantee: string; note?: string } }) {
   // Match front page pricing card style; show only the Window/Solar Cleaning plan and center it
   const plan = pricingCopy.plans.find((p) => p.title === "Window/Solar Cleaning");
 
